@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="app_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qgy-kh-PcQ" userLabel="refresh">
+                                <rect key="frame" x="10" y="50" width="326" height="364"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="482" id="O9x-Ho-yZY"/>
+                                    <constraint firstAttribute="width" constant="400" id="qcW-HN-Xne"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O9x-Ho-yZY"/>
+                                        <exclude reference="qcW-HN-Xne"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="O9x-Ho-yZY"/>
+                                        <include reference="qcW-HN-Xne"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yig-m0-Aog">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="1Tx-ZF-bpT">
+                                        <variation key="widthClass=compact" constant="208"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="28" id="Yit-pQ-SVW"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Tx-ZF-bpT"/>
+                                        <exclude reference="Yit-pQ-SVW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1Tx-ZF-bpT"/>
+                                        <include reference="Yit-pQ-SVW"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="segment_button:" destination="9pv-A4-QxB" eventType="valueChanged" id="xbn-aU-ZU0"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="yig-m0-Aog" secondAttribute="trailing" constant="122" id="1CG-rx-CsD">
+                                <variation key="widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="Qgy-kh-PcQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="2g6-ST-lOE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qgy-kh-PcQ" secondAttribute="trailing" constant="-16" id="D2a-IR-wOk"/>
+                            <constraint firstItem="yig-m0-Aog" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="123" id="JYz-5Q-Nne">
+                                <variation key="widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="yig-m0-Aog" secondAttribute="bottom" constant="13" id="Qch-8B-hDF"/>
+                            <constraint firstItem="Qgy-kh-PcQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="UTH-L7-vMY"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Qgy-kh-PcQ" secondAttribute="bottom" constant="49" id="mtG-iH-j08"/>
+                            <constraint firstItem="yig-m0-Aog" firstAttribute="top" secondItem="Qgy-kh-PcQ" secondAttribute="bottom" constant="8" id="yeU-AC-9Yv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yig-m0-Aog"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2g6-ST-lOE"/>
+                                <exclude reference="D2a-IR-wOk"/>
+                                <exclude reference="UTH-L7-vMY"/>
+                                <exclude reference="1CG-rx-CsD"/>
+                                <exclude reference="JYz-5Q-Nne"/>
+                                <exclude reference="yeU-AC-9Yv"/>
+                                <exclude reference="Qch-8B-hDF"/>
+                                <exclude reference="mtG-iH-j08"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yig-m0-Aog"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2g6-ST-lOE"/>
+                                <include reference="D2a-IR-wOk"/>
+                                <include reference="UTH-L7-vMY"/>
+                                <include reference="1CG-rx-CsD"/>
+                                <include reference="JYz-5Q-Nne"/>
+                                <include reference="yeU-AC-9Yv"/>
+                                <include reference="Qch-8B-hDF"/>
+                                <include reference="mtG-iH-j08"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="iconMap" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="map" destination="Qgy-kh-PcQ" id="9FF-39-WL6"/>
+                        <outlet property="segment" destination="yig-m0-Aog" id="ZvT-Po-2n9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="-295"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="sv1-us-qX8">
+            <objects>
+                <viewController id="fu3-V0-0KE" customClass="ThirdViewController" customModule="app_map" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nrY-vW-ext"/>
+                        <viewControllerLayoutGuide type="bottom" id="cos-Tg-4cw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ybk-Vi-mMe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="la8-nW-v8V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CY-N2-Htv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="792"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="app_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zID-Im-iCM">
+                                <rect key="frame" x="-6" y="20" width="606" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="531" id="4df-j4-FAE"/>
+                                    <constraint firstAttribute="width" constant="606" id="Khe-QD-29l"/>
+                                    <constraint firstAttribute="height" constant="531" id="aPJ-Ij-lvP"/>
+                                    <constraint firstAttribute="width" constant="406" id="iWx-Vg-3vl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4df-j4-FAE"/>
+                                        <exclude reference="iWx-Vg-3vl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4df-j4-FAE"/>
+                                        <exclude reference="Khe-QD-29l"/>
+                                        <exclude reference="aPJ-Ij-lvP"/>
+                                        <include reference="iWx-Vg-3vl"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="452-Rs-Qff"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="Syo-0f-pXX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zID-Im-iCM" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="15D-24-E2q"/>
+                            <constraint firstItem="zID-Im-iCM" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-22" id="9TK-LY-H2f"/>
+                            <constraint firstItem="zID-Im-iCM" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-22" id="EUo-sG-DnV"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zID-Im-iCM" secondAttribute="bottom" id="fRd-Xq-KIr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zID-Im-iCM" secondAttribute="trailing" constant="-16" id="kGm-3c-8xm"/>
+                            <constraint firstItem="zID-Im-iCM" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="kpw-hC-UOC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zID-Im-iCM" secondAttribute="trailing" constant="-16" id="ocq-kw-pCV"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zID-Im-iCM" secondAttribute="bottom" id="qXC-9Z-Nfc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EUo-sG-DnV"/>
+                                <exclude reference="kpw-hC-UOC"/>
+                                <exclude reference="ocq-kw-pCV"/>
+                                <exclude reference="fRd-Xq-KIr"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="15D-24-E2q"/>
+                                <exclude reference="9TK-LY-H2f"/>
+                                <include reference="EUo-sG-DnV"/>
+                                <exclude reference="kGm-3c-8xm"/>
+                                <include reference="kpw-hC-UOC"/>
+                                <include reference="ocq-kw-pCV"/>
+                                <include reference="fRd-Xq-KIr"/>
+                                <exclude reference="qXC-9Z-Nfc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="17806" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="list" destination="zID-Im-iCM" id="3v2-vB-Ee2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="410"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="fu3-V0-0KE" kind="relationship" relationship="viewControllers" id="N76-XP-oSi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="17806" width="50" height="50"/>
+        <image name="iconMap" width="50" height="50"/>
+    </resources>
+</document>
