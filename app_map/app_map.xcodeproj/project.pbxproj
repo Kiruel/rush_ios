@@ -16,6 +16,7 @@
 		433E288C1A459826005602A7 /* app_mapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E288B1A459826005602A7 /* app_mapTests.swift */; };
 		433E28A41A45A471005602A7 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E28A31A45A471005602A7 /* ThirdViewController.swift */; };
 		433E28A61A45AF3B005602A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433E28A51A45AF3B005602A7 /* MapKit.framework */; };
+		433E28A81A45E5E3005602A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433E28A71A45E5E3005602A7 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		433E288B1A459826005602A7 /* app_mapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_mapTests.swift; sourceTree = "<group>"; };
 		433E28A31A45A471005602A7 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		433E28A51A45AF3B005602A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		433E28A71A45E5E3005602A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433E28A81A45E5E3005602A7 /* CoreLocation.framework in Frameworks */,
 				433E28A61A45AF3B005602A7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 		433E28651A459826005602A7 = {
 			isa = PBXGroup;
 			children = (
+				433E28A71A45E5E3005602A7 /* CoreLocation.framework */,
 				433E28A51A45AF3B005602A7 /* MapKit.framework */,
 				433E28701A459826005602A7 /* app_map */,
 				433E28881A459826005602A7 /* app_mapTests */,
@@ -350,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = app_map/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = app_map;
 			};
 			name = Debug;
 		};
@@ -360,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = app_map/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = app_map;
 			};
 			name = Release;
 		};
@@ -378,7 +382,7 @@
 				);
 				INFOPLIST_FILE = app_mapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = app_mapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app_map.app/app_map";
 			};
 			name = Debug;
@@ -393,7 +397,7 @@
 				);
 				INFOPLIST_FILE = app_mapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = app_mapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/app_map.app/app_map";
 			};
 			name = Release;
