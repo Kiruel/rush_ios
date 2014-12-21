@@ -10,8 +10,11 @@ import UIKit
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var items: [String] = ["Ecole 42", "New York", "Zone 51"]
     @IBOutlet weak var list: UITableView!
+    
+    var places: [Place] = []
+    var arrayPlaces: NSMutableArray = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.list.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -22,19 +25,33 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count;
+        return arrayPlaces.count
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "swap"{
+            let vc = segue.destinationViewController as TabViewController
+            
+            var detailMap: TabViewController = segue.destinationViewController as TabViewController
+            detailMap.navigationItem.title = places[(sender as NSIndexPath).row].title_
+            detailMap.place_ = places[(sender as NSIndexPath).row]
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.list.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        
-        cell.textLabel.text = self.items[indexPath.row]
-        
+        var cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
+        cell.textLabel.text = arrayPlaces[indexPath.row]["title"] as? String
         return cell
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        var cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
+        cell.textLabel.text = arrayPlaces[indexPath.row]["title"] as? String
     }
+
 }

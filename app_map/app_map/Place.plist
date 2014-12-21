@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>New York</string>
+		<key>subTitle</key>
+		<string>City on USA</string>
+		<key>lat</key>
+		<real>40.7136945</real>
+		<key>lon</key>
+		<real>-74.0065421</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Ecole 42</string>
+		<key>subTitle</key>
+		<string>Cybercafé, Hotêl et Cinéma</string>
+		<key>lat</key>
+		<real>48.8965899</real>
+		<key>lon</key>
+		<real>2.3185</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>San Francisco</string>
+		<key>subTitle</key>
+		<string>Maybe soon ...</string>
+		<key>lat</key>
+		<real>37.7755617</real>
+		<key>lon</key>
+		<real>-122.4169883</real>
+	</dict>
+</array>
+</plist>
