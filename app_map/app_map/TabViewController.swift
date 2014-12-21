@@ -22,6 +22,22 @@ class TabViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var adresse: UILabel!
     @IBOutlet weak var country: UILabel!
     
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBAction func segment(sender: AnyObject) {
+        if segment.selectedSegmentIndex == 0
+        {
+            mapView.mapType = MKMapType.Standard
+        }
+        else if segment.selectedSegmentIndex == 1
+        {
+            mapView.mapType = MKMapType.Satellite
+        }
+        else if segment.selectedSegmentIndex == 2
+        {
+            mapView.mapType = MKMapType.Hybrid
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         println(place_?.lat_)
