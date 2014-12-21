@@ -380,66 +380,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lattitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqQ-cp-Mru">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.53809440971736955" blue="0.71565047554347827" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-fE-beh">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P9s-Qa-qyQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-fE-beh">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.5380944097" blue="0.71565047550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P9s-Qa-qyQ">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="465"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rou-iG-3TB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="dML-RM-I8N"/>
+                                    <constraint firstAttribute="height" constant="21" id="ugm-rs-XJA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dML-RM-I8N"/>
+                                        <exclude reference="ugm-rs-XJA"/>
+                                    </mask>
                                 </variation>
-                            </mapView>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                    <mask key="constraints">
+                                        <include reference="dML-RM-I8N"/>
+                                        <include reference="ugm-rs-XJA"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="P9s-Qa-qyQ" firstAttribute="leading" secondItem="mOn-3u-SsT" secondAttribute="leading" id="Cr4-zk-q8h"/>
+                            <constraint firstItem="5NE-fE-beh" firstAttribute="top" secondItem="P9s-Qa-qyQ" secondAttribute="bottom" constant="8" symbolic="YES" id="DI1-2V-Qj6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5NE-fE-beh" secondAttribute="trailing" constant="264" id="E0j-sh-hvZ"/>
-                            <constraint firstItem="gqQ-cp-Mru" firstAttribute="top" secondItem="5NE-fE-beh" secondAttribute="bottom" constant="23" id="WCh-0s-IHx"/>
-                            <constraint firstItem="HSx-EN-Hqa" firstAttribute="top" secondItem="gqQ-cp-Mru" secondAttribute="bottom" constant="8" id="ZXt-SF-EYb"/>
+                            <constraint firstItem="HSx-EN-Hqa" firstAttribute="top" secondItem="rou-iG-3TB" secondAttribute="bottom" constant="77" id="Gs5-Ja-SGG"/>
+                            <constraint firstItem="rou-iG-3TB" firstAttribute="leading" secondItem="5NE-fE-beh" secondAttribute="leading" id="O7t-wZ-OId"/>
+                            <constraint firstItem="P9s-Qa-qyQ" firstAttribute="top" secondItem="mOn-3u-SsT" secondAttribute="top" id="aS6-4m-cjU"/>
                             <constraint firstItem="5NE-fE-beh" firstAttribute="leading" secondItem="mOn-3u-SsT" secondAttribute="leadingMargin" constant="6" id="cFu-8k-i9m"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gqQ-cp-Mru" secondAttribute="trailing" constant="264" id="fjX-zh-2DT"/>
-                            <constraint firstItem="gqQ-cp-Mru" firstAttribute="leading" secondItem="mOn-3u-SsT" secondAttribute="leadingMargin" constant="6" id="ySH-8w-QkD"/>
+                            <constraint firstItem="rou-iG-3TB" firstAttribute="top" secondItem="5NE-fE-beh" secondAttribute="bottom" constant="48" id="eib-6o-ivv"/>
+                            <constraint firstAttribute="trailing" secondItem="P9s-Qa-qyQ" secondAttribute="trailing" id="j40-iR-9sD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="gqQ-cp-Mru"/>
-                                <exclude reference="5NE-fE-beh"/>
                                 <exclude reference="P9s-Qa-qyQ"/>
+                                <exclude reference="5NE-fE-beh"/>
+                                <exclude reference="rou-iG-3TB"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Cr4-zk-q8h"/>
+                                <exclude reference="aS6-4m-cjU"/>
+                                <exclude reference="j40-iR-9sD"/>
+                                <exclude reference="DI1-2V-Qj6"/>
                                 <exclude reference="E0j-sh-hvZ"/>
                                 <exclude reference="cFu-8k-i9m"/>
-                                <exclude reference="WCh-0s-IHx"/>
-                                <exclude reference="fjX-zh-2DT"/>
-                                <exclude reference="ySH-8w-QkD"/>
-                                <exclude reference="ZXt-SF-EYb"/>
+                                <exclude reference="O7t-wZ-OId"/>
+                                <exclude reference="eib-6o-ivv"/>
+                                <exclude reference="Gs5-Ja-SGG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="gqQ-cp-Mru"/>
-                                <include reference="5NE-fE-beh"/>
                                 <include reference="P9s-Qa-qyQ"/>
+                                <include reference="5NE-fE-beh"/>
+                                <include reference="rou-iG-3TB"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Cr4-zk-q8h"/>
+                                <include reference="aS6-4m-cjU"/>
+                                <include reference="j40-iR-9sD"/>
+                                <include reference="DI1-2V-Qj6"/>
                                 <include reference="E0j-sh-hvZ"/>
                                 <include reference="cFu-8k-i9m"/>
-                                <include reference="WCh-0s-IHx"/>
-                                <include reference="fjX-zh-2DT"/>
-                                <include reference="ySH-8w-QkD"/>
-                                <include reference="ZXt-SF-EYb"/>
+                                <include reference="O7t-wZ-OId"/>
+                                <include reference="eib-6o-ivv"/>
+                                <include reference="Gs5-Ja-SGG"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="longitude" destination="rou-iG-3TB" id="C6M-ge-hZK"/>
                         <outlet property="mapView" destination="P9s-Qa-qyQ" id="9YP-eK-lei"/>
                     </connections>
                 </viewController>

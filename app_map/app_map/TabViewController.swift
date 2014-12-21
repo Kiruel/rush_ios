@@ -15,8 +15,10 @@ class TabViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
    
     var place_ : Place?
     var locationManager: CLLocationManager!
-    @IBOutlet weak var mapView: MKMapView!
+
     
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var longitude: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class TabViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locatePoint(self.place_!.lat_, longitude: place_!.lon_)
         mapView.mapType = .Hybrid
         addPin(place_!)
+        longitude.text = place_?.subTitle_
     }
     
     override func didReceiveMemoryWarning() {
