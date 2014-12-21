@@ -1,5 +1,5 @@
 //
-//  4ViewController.swift
+//  TabViewController.swift
 //  app_map
 //
 //  Created by swift on 20/12/14.
@@ -10,9 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class TabViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class TabViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate {
     
-    
+   
     var place_ : Place?
     var locationManager: CLLocationManager!
     @IBOutlet weak var mapView: MKMapView!
@@ -59,21 +59,5 @@ class TabViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         pinAnnot.title = place.title_
         pinAnnot.subtitle = place.subTitle_
         mapView.addAnnotation(pinAnnot)
-    }
-}
-
-class Place: NSObject {
-    
-    var title_: String
-    var subTitle_: String
-    var lat_: Double
-    var lon_: Double
-    
-    init (titlePinAnnotation title: String, subTitleAnnotation subTitle:String, latitude lat: Double, longitude lon: Double) {
-        //        super.init()
-        title_ = title
-        subTitle_ = subTitle
-        lat_ = lat
-        lon_ = lon
     }
 }

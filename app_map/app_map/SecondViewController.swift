@@ -11,13 +11,12 @@ import UIKit
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var list: UITableView!
-    
-    var places: [Place] = []
-    var arrayPlaces: NSMutableArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.list.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,16 +32,13 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return arrayPlaces.count
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "swap"{
-            let vc = segue.destinationViewController as TabViewController
-            
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "swap" {
             var detailMap: TabViewController = segue.destinationViewController as TabViewController
             detailMap.navigationItem.title = places[(sender as NSIndexPath).row].title_
             detailMap.place_ = places[(sender as NSIndexPath).row]
         }
     }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
         cell.textLabel.text = arrayPlaces[indexPath.row]["title"] as? String
@@ -52,6 +48,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "Cell")
         cell.textLabel.text = arrayPlaces[indexPath.row]["title"] as? String
+        performSegueWithIdentifier("swap", sender: indexPath)
     }
 
 }

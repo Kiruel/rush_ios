@@ -19,6 +19,7 @@
 		433E28A81A45E5E3005602A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433E28A71A45E5E3005602A7 /* CoreLocation.framework */; };
 		433E28AA1A4632A7005602A7 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E28A91A4632A7005602A7 /* TabViewController.swift */; };
 		433E28AC1A463F3A005602A7 /* Place.plist in Resources */ = {isa = PBXBuildFile; fileRef = 433E28AB1A463F3A005602A7 /* Place.plist */; };
+		433E28AE1A465121005602A7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E28AD1A465121005602A7 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		433E28A71A45E5E3005602A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		433E28A91A4632A7005602A7 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		433E28AB1A463F3A005602A7 /* Place.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Place.plist; sourceTree = "<group>"; };
+		433E28AD1A465121005602A7 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				433E28771A459826005602A7 /* SecondViewController.swift */,
 				433E28A31A45A471005602A7 /* ThirdViewController.swift */,
 				433E28A91A4632A7005602A7 /* TabViewController.swift */,
+				433E28AD1A465121005602A7 /* Place.swift */,
 				433E28791A459826005602A7 /* Main.storyboard */,
 				433E287C1A459826005602A7 /* Images.xcassets */,
 				433E287E1A459826005602A7 /* LaunchScreen.xib */,
@@ -236,6 +239,7 @@
 				433E28781A459826005602A7 /* SecondViewController.swift in Sources */,
 				433E28741A459826005602A7 /* AppDelegate.swift in Sources */,
 				433E28AA1A4632A7005602A7 /* TabViewController.swift in Sources */,
+				433E28AE1A465121005602A7 /* Place.swift in Sources */,
 				433E28A41A45A471005602A7 /* ThirdViewController.swift in Sources */,
 				433E28761A459826005602A7 /* FirstViewController.swift in Sources */,
 			);

@@ -10,6 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
+var places: [Place] = []
+var arrayPlaces: NSMutableArray = []
+
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var Control: UISegmentedControl!
@@ -49,6 +52,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         annotation.title = "Ecole 42"
         annotation.subtitle = "Cybercafé, Hôtel et Cinéma"
         self.map.addAnnotation(annotation)
+        
+        
+        
+        // MARK: Plist
+        if let path = NSBundle.mainBundle().pathForResource("Place", ofType: "plist"){
+            arrayPlaces = NSMutableArray(contentsOfFile: path)!
+        }
+        createArrayPlaces()
+        
     }
     //##################################################################
     
@@ -116,5 +128,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Places
+    func createArrayPlaces() {
+        
+        for item in arrayPlaces {
+            var aPlace = Place(titlePinAnnotation: item["title"] as String,
+                subTitleAnnotation: item["subTitle"] as String,
+                latitude: item["lat"] as Double,
+                longitude: item["lon"] as Double)
+            places.append(aPlace)
+        }
     }
 }
