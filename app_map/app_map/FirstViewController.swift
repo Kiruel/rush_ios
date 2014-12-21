@@ -53,8 +53,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         annotation.subtitle = "Cybercafé, Hôtel et Cinéma"
         self.map.addAnnotation(annotation)
         
-        
-        
         // MARK: Plist
         if let path = NSBundle.mainBundle().pathForResource("Place", ofType: "plist"){
             arrayPlaces = NSMutableArray(contentsOfFile: path)!
