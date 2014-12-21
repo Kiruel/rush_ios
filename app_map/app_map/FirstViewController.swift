@@ -135,7 +135,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
             var aPlace = Place(titlePinAnnotation: item["title"] as String,
                 subTitleAnnotation: item["subTitle"] as String,
                 latitude: item["lat"] as Double,
-                longitude: item["lon"] as Double)
+                longitude: item["lon"] as Double,
+                cityAnnotation: item["city"] as String,
+                adresseAnnotation: item["adresse"] as String,
+                countryAnnotation: item["country"] as String)
             places.append(aPlace)
         }
     }

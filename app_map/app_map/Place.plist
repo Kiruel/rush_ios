@@ -3,10 +3,14 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>country</key>
+		<string>United States</string>
+		<key>adresse</key>
+		<string>New York, NY</string>
 		<key>title</key>
 		<string>New York</string>
-        <key>city</key>
-        <string>New York</string>
+		<key>city</key>
+		<string>New York</string>
 		<key>subTitle</key>
 		<string>City on USA</string>
 		<key>lat</key>
@@ -15,10 +19,14 @@
 		<real>-74.0065421</real>
 	</dict>
 	<dict>
+		<key>country</key>
+		<string>France</string>
+		<key>adresse</key>
+		<string>96 Boulevard Bessières</string>
 		<key>title</key>
 		<string>Ecole 42</string>
-        <key>city</key>
-        <string>Paris</string>
+		<key>city</key>
+		<string>75017 Paris</string>
 		<key>subTitle</key>
 		<string>Cybercafé, Hotêl et Cinéma</string>
 		<key>lat</key>
@@ -27,10 +35,14 @@
 		<real>2.3185</real>
 	</dict>
 	<dict>
+		<key>country</key>
+		<string>United States</string>
+		<key>adresse</key>
+		<string>San Francisco, CA</string>
 		<key>title</key>
 		<string>San Francisco</string>
-        <key>city</key>
-        <string>San Francisco</string>
+		<key>city</key>
+		<string>San Francisco</string>
 		<key>subTitle</key>
 		<string>Maybe soon ...</string>
 		<key>lat</key>
